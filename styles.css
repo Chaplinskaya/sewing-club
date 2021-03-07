@@ -1,0 +1,193 @@
+html {
+font-size: 16px;
+margin: 0;
+padding: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Ruda;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #201C1D;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header .logo {
+    height: 100%;
+    display: flex;
+    }
+header .logo img {
+    max-width: 90px;
+    padding: 10px 0;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 96%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100px;
+    
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+nav ul > li {
+    padding: 0 10px;
+}
+@media only screen and (max-width: 680px) {
+    nav ul > li {
+    padding: 0 5px;
+}
+}
+.main {
+    background-image: linear-gradient(to top, rgba(0,20,50,0.3), rgba(0,20,50,0.3)), url("img/sew1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+h1 {
+    padding: 200px 0;
+    text-align: center;
+    margin: 0;
+    font-size: 4rem;
+    font-family: Akaya Telivigala;
+    color: #CC5569;
+}
+.room_section {
+    margin-top: 3rem;
+}
+h2 {
+    padding: 0 0 50px 0;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    font-family: Akaya Telivigala;
+    color: #CC5569;
+}
+.room_item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 97%;
+    margin: auto;
+}
+.our_room {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; 
+}
+.img_room {
+    width: 50%;
+}
+.our_room img {
+    max-width: 100%;
+    flex-grow: 2;
+}
+.text_room {
+    width: 45%;
+    padding: 0 2rem;
+}
+.text_room p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #201C1D;
+}
+@media only screen and (max-width: 680px) {
+    .room_item {
+        flex-direction: column;
+    }
+    .room_item:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+    .img_room {
+        width: 100%;
+    }
+    .text_room {
+        width: 100%;
+    }
+    .text_room p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+}
+.portfolio {
+    margin-top: 2rem;
+}
+.portfolio_container {
+    width: 97%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 48% 24% 25% / repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.portfolio_item {
+    max-width: 100%;
+    }
+.portfolio_item img{
+    width: 100%;
+    height: 100%;
+}
+.portfolio_item:nth-child(4),
+.portfolio_item:nth-child(6)  {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    }
+.portfolio_item:nth-child(5) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    }
+.portfolio_item:last-child {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+@media only screen and (max-width: 680px) {
+    .portfolio_container {
+        grid-template: 2fr 2fr 1fr 1fr/ repeat(2, 1fr);
+    }
+    .portfolio_item:nth-child(1)
+      {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .portfolio_item:nth-child(2)
+      {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .portfolio_item:nth-child(3)
+      {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .portfolio_item:nth-child(4)
+      {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .portfolio_item:nth-child(6) {
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    .portfolio_item:nth-child(5) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .portfolio_item:last-child {
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
